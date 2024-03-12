@@ -3,6 +3,17 @@
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": ".",
   "projectType": "application",
-  "targets": {},
+  "targets": {
+    "dev": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "markup-test-design-change:build",
+        "dev": true,
+        "port": 5950,
+        "turbo": true
+      }
+    }
+  },
   "tags": []
 }
